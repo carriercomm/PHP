@@ -476,6 +476,28 @@ PHP_MINFO_FUNCTION(safenet)
 /* }}} */
 		]]>
 		</programlisting>
+		<para>INI_STR取不到值的问题, 是因为REGISTER_INI_ENTRIES();没有开启</para>
+		<programlisting>
+		<![CDATA[
+PHP_MINIT_FUNCTION(gt1)
+{
+	/* If you have INI entries, uncomment these lines */
+	REGISTER_INI_ENTRIES();
+	
+	init_class(TSRMLS_C);
+	
+	return SUCCESS;
+}
+
+PHP_MSHUTDOWN_FUNCTION(gt1)
+{
+	/* uncomment this line if you have INI entries */
+	UNREGISTER_INI_ENTRIES();
+	
+	return SUCCESS;
+}
+		]]>
+		</programlisting>
 	</section>
 	<section id="PHP_MINFO_FUNCTION">
 		<title>PHP_MINFO_FUNCTION</title>
@@ -504,6 +526,20 @@ PHP_MINFO_FUNCTION(netkiller)
         php_info_print_table_row(2, "author", "Neo Chan");
         php_info_print_table_end();
 		]]>
+		</screen>
+	</section>
+	<section>
+		<title>zval to string</title>
+		<screen>
+zval *var;
+char *cstr;
+int cstrlen;
+/* ... */
+if (Z_TYPE_P(var) != IS_STRING) {
+    convert_to_string(var);
+}
+cstr = Z_STRVAL_P(var);
+cstrlen = Z_STRLEN_P(var);			
 		</screen>
 	</section>
 </chapter>
