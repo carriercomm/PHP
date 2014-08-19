@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter id="norm">
+	<title>开发规范</title>
+	<!-- development norm -->
+	<section>
+		<title>文件</title>
+		<para></para>
+		<sidebar>
+			<title>格式</title>
+			<para>使用 UNIX 风格换行, 请在你的编辑器内调整</para>
+			<screen>
+UNIX (LF或"\n") MAC OS (CR 或"\r") Windows CRLF \r\n			
+			</screen>
+		</sidebar>
+		<sidebar>
+			<title>编码</title>
+			<para>我们使用UTF-8，有些IDE环境 UTF-8 BOM，我们不需要 BOM</para>
+		</sidebar>
+	</section>
+</chapter>
