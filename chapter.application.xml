@@ -230,4 +230,8 @@ pear install Net_Socket
 		</screen>
 		<para><ulink url="http://pear.php.net/manual/en/package.networking.net-socket.readall.php" /></para>
 	</section>
+	<section id="unirest">
+		<title>Unirest - Unirest is a set of lightweight HTTP libraries</title>
+		<para>http://unirest.io/php.html</para>
+	</section>
 </chapter>
