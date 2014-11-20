@@ -215,4 +215,9 @@ echo check_id_number('330702198003090915');
 		<title>snoopy 模拟浏览器操作</title>
 		<para>http://snoopy.sourceforge.net/</para>
 	</section>
+	<section>
+		<title>PHP Nightrain</title>
+		<para>Using PHP Nightrain you will be able to deploy and run HTML, CSS, JavaScript and PHP web applications as a native desktop application on Windows, Mac and the Linux operating systems. Popular PHP Frameworks (e.g. CakePHP, Laravel, Drupal, etc…) are well supported!</para>
+		<para>http://www.naetech.com/php-nightrain</para>
+	</section>
 </chapter>

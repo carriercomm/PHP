@@ -4,6 +4,8 @@
 	<para><ulink url="http://www.phpframeworks.com/">PHP Frameworks 比较</ulink></para>
 	<para><ulink url="http://www.sitepoint.com/best-php-frameworks-2014/" /></para>
 	
+	&chapter.framework.smarty.xml;
+	
 <section id="laravel">
 	<title>Laravel - The PHP framework for web artisans.</title>
 	<para>http://laravel.com/</para>
