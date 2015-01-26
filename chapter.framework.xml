@@ -480,4 +480,49 @@ while ($row = $stmt->fetch()) {
 	</section>
 </section>
 
+<section id="react">
+	<title>React - Event-driven, non-blocking I/O with PHP. (Node.PHP)</title>
+	<para>http://reactphp.org/</para>
+	<programlisting>
+AN EXAMPLE: WEBSERVER
+
+This simple web server written in React responds with "Hello World" for every request.
+
+require 'vendor/autoload.php';
+
+$app = function ($request, $response) {
+    $response->writeHead(200, array('Content-Type' => 'text/plain'));
+    $response->end("Hello World\n");
+};
+
+$loop = React\EventLoop\Factory::create();
+$socket = new React\Socket\Server($loop);
+$http = new React\Http\Server($socket, $loop);
+
+$http->on('request', $app);
+echo "Server running at http://127.0.0.1:1337\n";
+
+$socket->listen(1337);
+$loop->run();
+To install, just run this command:
+
+% composer init --require=react/http:0.3.* -n
+% composer install
+To run the server, put the code into a file example.php and execute it with the php program:
+
+% php example.php
+Server running at http://127.0.0.1:1337
+	</programlisting>
+</section>
+<section>
+	<title>Ratchet - WebSockets for PHP</title>
+	<section>
+		<title></title>
+		<screen>
+curl -sS https://getcomposer.org/installer | php
+php composer.phar
+php ~/composer.phar require cboden/ratchet		
+		</screen>
+	</section>
+</section>
 </chapter>
