@@ -6,7 +6,15 @@
 	<section>
 		<title>安装配置 Phalcon </title>
 		<section>
-			<title>安装扩展</title>
+			<title>Ubuntu</title>
+			<screen>
+sudo apt-add-repository ppa:phalcon/stable
+sudo apt-get update
+sudo apt-get install php5-phalcon			
+			</screen>
+		</section>
+		<section>
+			<title>编译安装</title>
 			<screen>
 			<![CDATA[
 cd /usr/local/src/
